@@ -1,13 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ClipboardCheck, Bug, CheckCircle2, Target } from "lucide-react";
-import { Snowfall } from "@/components/Snowfall";
-import { SnowPile } from "@/components/SnowPile";
 import snowGlobeBg from "@/assets/snow-globe-bg.png";
 
 export const QualityAssurance = () => {
   const navigate = useNavigate();
 
-  const projects = [
+  const projects = [/*
     {
       title: "E-Commerce Testing Suite",
       scope: "End-to-End Testing",
@@ -29,7 +27,7 @@ export const QualityAssurance = () => {
       metrics: ["200+ endpoints validated", "Sub-100ms response times", "100% uptime SLA met"],
       tools: ["Postman", "Newman", "JMeter"],
     },
-  ];
+  */];
 
   return (
     <div className="relative min-h-screen">
@@ -46,12 +44,6 @@ export const QualityAssurance = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/96 to-background/98 backdrop-blur-[2px]" />
         <div className="absolute inset-0 bg-black/50" />
       </div>
-
-      {/* Snowfall Effect */}
-      <Snowfall />
-
-      {/* Snow Pile at Bottom */}
-      <SnowPile />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">

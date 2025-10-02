@@ -3,8 +3,6 @@ import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { Contact } from "@/components/Contact";
-import { Snowfall } from "@/components/Snowfall";
-import { SnowPile } from "@/components/SnowPile";
 import snowGlobeBg from "@/assets/snow-globe-bg.png";
 
 const Index = () => {
@@ -26,12 +24,6 @@ const Index = () => {
 
       {/* Navigation */}
       <Navigation />
-
-      {/* Snowfall Effect */}
-      <Snowfall />
-
-      {/* Snow Pile at Bottom */}
-      <SnowPile />
 
       {/* Content */}
       <div className="relative z-10">

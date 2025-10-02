@@ -8,6 +8,8 @@ import Aviation from "./pages/Aviation";
 import SoftwareDevelopment from "./pages/SoftwareDevelopment";
 import QualityAssurance from "./pages/QualityAssurance";
 import NotFound from "./pages/NotFound";
+import { Snowfall } from "@/components/Snowfall";
+import { SnowPile } from "@/components/SnowPile";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +19,12 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        {/* Snowfall Effect */}
+        <Snowfall />
+
+        {/* Snow Pile at Bottom */}
+        <SnowPile />
+
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/aviation" element={<Aviation />} />
@@ -29,5 +37,4 @@ const App = () => (
     </TooltipProvider>
   </QueryClientProvider>
 );
-
 export default App;
