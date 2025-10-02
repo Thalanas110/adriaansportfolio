@@ -25,7 +25,7 @@ export const Hero = () => {
               <div className="relative">
                 <div className="absolute -inset-4 bg-gradient-to-r from-primary via-accent to-primary opacity-30 blur-3xl animate-glow-pulse" />
                 <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
-                  Your Name
+                  Adriaan M. Dimate
                 </h1>
               </div>
             </div>

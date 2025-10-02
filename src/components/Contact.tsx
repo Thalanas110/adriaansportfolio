@@ -118,7 +118,7 @@ export const Contact = () => {
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     className="w-full px-4 py-3 bg-background border border-border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300 text-foreground"
-                    placeholder="Your name"
+                    placeholder="Adriaan M. Dimate"
                   />
                   {errors.name && <p className="text-destructive text-sm mt-1">{errors.name}</p>}
                 </div>
