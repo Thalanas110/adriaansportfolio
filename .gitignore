@@ -70,3 +70,6 @@ node
 dist-ssr/
 
 # Keep lockfiles if you prefer them tracked. Remove the lockfile lines above if you want to commit lockfiles.
+
+# Local Netlify folder
+.netlify

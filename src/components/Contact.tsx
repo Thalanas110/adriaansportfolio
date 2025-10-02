@@ -94,7 +94,7 @@ export const Contact = () => {
             Get In Touch
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a question or want to work together? I'd love to hear from you.
+            Have any questions regarding me and my work? I'd love to hear.
           </p>
         </div>
 
@@ -104,9 +104,8 @@ export const Contact = () => {
             <div className="animate-fade-in-up" style={{ animationDelay: "0.2s" }}>
               <h3 className="text-2xl font-bold mb-6 text-foreground">Let's Connect</h3>
               <p className="text-muted-foreground leading-relaxed mb-8">
-                Whether you're interested in aviation, software development, or quality assurance, 
-                I'm always open to discussing new opportunities, collaborations, or just having a 
-                great conversation about technology, my hobbies, and innovation.
+                Wether you are interested in software development, testing, or in aviation,
+                or just want to vent out, my inbox is always open.
               </p>
             </div>
 

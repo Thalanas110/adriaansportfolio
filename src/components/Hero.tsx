@@ -28,6 +28,16 @@ export const Hero = () => {
                 <h1 className="relative text-5xl md:text-7xl lg:text-8xl font-bold bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
                   Adriaan M. Dimate
                 </h1>
+                {/* Neurodiversity / ASD badge - visible but subtle */}
+                <div className="mt-3">
+                  <span
+                    className="inline-block text-xs font-medium text-muted-foreground bg-muted/20 border border-border/30 rounded-full px-3 py-1"
+                    aria-label="Autism spectrum disorder"
+                    title="Autism spectrum disorder"
+                  >
+                    Autistic (ASD)
+                  </span>
+                </div>
               </div>
             </div>
             

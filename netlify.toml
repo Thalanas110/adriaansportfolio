@@ -1,0 +1,22 @@
+# Netlify configuration for Vite + React
+# Build command: npm run build
+# Publish directory: dist
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+  # (Optional) specify Node version used during build
+  environment = { NODE_VERSION = "18" }
+
+# Do NOT store secret keys in this file. Use Netlify's UI or CLI to set environment variables.
+# Example (DO NOT UNCOMMENT OR ADD REAL KEYS HERE):
+# [context.production.environment]
+#   VITE_EMAILJS_SERVICE_ID = "your_service_id"
+#   VITE_EMAILJS_TEMPLATE_ID = "your_template_id"
+#   VITE_EMAILJS_PUBLIC_KEY = "your_public_key"
+
+# If you need redirects (SPA routing), uncomment and customize the rule below:
+# [[redirects]]
+#   from = "/*"
+#   to = "/index.html"
+#   status = 200
