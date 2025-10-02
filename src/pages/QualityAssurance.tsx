@@ -1,5 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { ArrowLeft, ClipboardCheck, Bug, CheckCircle2, Target } from "lucide-react";
+import snowGlobeBg from "@/assets/snow-globe-bg.png";
 
 export const QualityAssurance = () => {
   const navigate = useNavigate();
@@ -29,8 +30,23 @@ export const QualityAssurance = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-6 py-12">
+    <div className="relative min-h-screen">
+      {/* Background Image */}
+      <div
+        className="fixed inset-0 z-0"
+        style={{
+          backgroundImage: `url(${snowGlobeBg})`,
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+        }}
+      >
+        <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/96 to-background/98 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-black/50" />
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">
         <button
           onClick={() => navigate("/")}
           className="group flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors duration-300 mb-12"
