@@ -48,9 +48,9 @@ export const Contact = () => {
   };
 
   const contactInfo = [
-    { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Your City, Country" },
+    { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Olongapo City, Zambales" },
     { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: <Mail className="w-5 h-5" />, label: "Email", value: "your.email@example.com" },
+    { icon: <Mail className="w-5 h-5" />, label: "Email", value: "aadimate55@gmail.com", "202310449@gordoncollege.edu.ph" },
   ];
 
   return (

@@ -44,6 +44,22 @@ export const SoftwareDevelopment = () => {
       github: "#",
       demo: "https://practicumoneblogsite.vercel.app/",
     },
+    {
+      title: "church website",
+      tech: ["React", "Node.js", "Supabase", "PostgreSQL"],
+      description: "Website for my church where I am a part of the media team.",
+      highlights: ["CRUD operations", "User authentication", "Responsive design", "Video playback", "God-oriented"],
+      github: "#",
+      demo: "#",
+    },
+        {
+      title: "poem selector samples",
+      tech: ["Vanilla"],
+      description: "Poem selection panes that I did for my now ex-girlfriend. All displayed on the website, just click to select. Although these should no longer be here, some of my best UI/UX works are here.Under maintenance to remove ALL names and only the UI + poems will remain.",
+      highlights: ["Vanilla JS", "Responsive design", "UI/UX"],
+      github: "#",
+      demo: "https://poemselections.netlify.app/",
+    },
 
   ];
 
@@ -86,6 +102,23 @@ export const SoftwareDevelopment = () => {
           <p className=" text-muted-foreground max-w-xl mx-auto">
             Click on a project to view.
           </p>
+        </div>
+
+        {/* Project Dump Button */}
+        <div className="flex justify-center mb-12">
+          <a
+            href="https://allofadriaansprojects.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-accent text-primary-foreground rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+          >
+            <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-75 blur-lg transition-all duration-500" />
+            <div className="relative flex items-center gap-3">
+              <ExternalLink className="w-5 h-5 group-hover:rotate-12 transition-transform duration-300" />
+              <span>View All Projects</span>
+              <div className="w-2 h-2 bg-current rounded-full animate-pulse" />
+            </div>
+          </a>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
