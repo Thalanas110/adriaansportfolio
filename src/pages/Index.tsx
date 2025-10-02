@@ -20,7 +20,8 @@ const Index = () => {
           backgroundAttachment: "fixed",
         }}
       >
-        <div className="absolute inset-0 bg-gradient-to-b from-background/97 via-background/95 to-background/97 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/98 via-background/96 to-background/98 backdrop-blur-[2px]" />
+        <div className="absolute inset-0 bg-black/30" />
       </div>
 
       {/* Navigation */}

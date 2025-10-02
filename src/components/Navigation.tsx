@@ -41,7 +41,6 @@ export const Navigation = () => {
               onClick={() => scrollToSection("home")}
               className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent hover:scale-105 transition-transform"
             >
-              Portfolio
             </button>
 
             {/* Desktop Navigation */}
