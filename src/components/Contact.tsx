@@ -2,6 +2,8 @@ import { useState } from "react";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
 import { z } from "zod";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
+import { EMAILJS_CONFIG } from "@/config/emailjs";
 
 const contactSchema = z.object({
   name: z.string().trim().min(1, "Name is required").max(100, "Name must be less than 100 characters"),
@@ -19,22 +21,42 @@ export const Contact = () => {
     message: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     try {
       contactSchema.parse(formData);
       setErrors({});
+      setIsSubmitting(true);
       
-      // Here you would typically send the data to your backend
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        subject: formData.subject,
+        message: formData.message,
+        to_email: "amdimate43@gmail.com", // Primary email
+        reply_to: formData.email,
+      };
+
+      // Send email using EmailJS
+      await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      );
+      
       toast({
-        title: "Message sent!",
+        title: "Message sent successfully!",
         description: "Thank you for reaching out. I'll get back to you soon.",
       });
       
       setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
+    } 
+    catch (error) {
       if (error instanceof z.ZodError) {
         const newErrors: Record<string, string> = {};
         error.errors.forEach((err) => {
@@ -43,14 +65,25 @@ export const Contact = () => {
           }
         });
         setErrors(newErrors);
+      } 
+      else {
+        toast({
+          title: "Failed to send message",
+          description: "Something went wrong. Please try again or contact me directly.",
+          variant: "destructive",
+        });
+        console.error("EmailJS error:", error);
       }
+    } 
+    finally {
+      setIsSubmitting(false);
     }
   };
 
   const contactInfo = [
     { icon: <MapPin className="w-5 h-5" />, label: "Location", value: "Olongapo City, Zambales" },
-    { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+1 (555) 123-4567" },
-    { icon: <Mail className="w-5 h-5" />, label: "Email", value: "aadimate55@gmail.com", "202310449@gordoncollege.edu.ph" },
+    { icon: <Phone className="w-5 h-5" />, label: "Phone", value: "+63 943 065 4178" },
+    { icon: <Mail className="w-5 h-5" />, label: "Emails", value: "aadimate55@gmail.com, 202310449@gordoncollege.edu.ph" },
   ];
 
   return (
@@ -73,7 +106,7 @@ export const Contact = () => {
               <p className="text-muted-foreground leading-relaxed mb-8">
                 Whether you're interested in aviation, software development, or quality assurance, 
                 I'm always open to discussing new opportunities, collaborations, or just having a 
-                great conversation about technology and innovation.
+                great conversation about technology, my hobbies, and innovation.
               </p>
             </div>
 
@@ -170,12 +203,13 @@ export const Contact = () => {
 
                 <button
                   type="submit"
-                  className="group relative w-full px-6 py-4 bg-gradient-to-r from-primary to-accent text-primary-foreground font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-glow)]"
+                  disabled={isSubmitting}
+                  className="group relative w-full px-6 py-4 bg-gradient-to-r from-primary to-accent text-primary-foreground font-medium rounded-lg overflow-hidden transition-all duration-300 hover:scale-[1.02] hover:shadow-[var(--shadow-glow)] disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <span className="relative flex items-center justify-center gap-2">
-                    Send Message
-                    <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
+                    {isSubmitting ? "Sending..." : "Send Message"}
+                    <Send className={`w-5 h-5 transition-transform duration-300 ${isSubmitting ? "animate-pulse" : "group-hover:translate-x-1"}`} />
                   </span>
                 </button>
               </form>

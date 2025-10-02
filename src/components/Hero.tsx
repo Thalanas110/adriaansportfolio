@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import profileImg from "@/assets/profile.jpg";
 
 export const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -97,25 +98,13 @@ export const Hero = () => {
               
               {/* Circular frame */}
               <div className="relative w-72 h-72 md:w-96 md:h-96 lg:w-[450px] lg:h-[450px] rounded-full overflow-hidden border-4 border-primary/30 group-hover:border-primary/60 transition-all duration-500 shadow-[var(--shadow-card)] group-hover:shadow-[var(--shadow-intense)] group-hover:scale-105 transform-gpu will-change-transform">
-                {/* Placeholder - Replace with actual image */}
-                <div className="w-full h-full bg-gradient-to-br from-card/80 to-secondary/50 backdrop-blur-sm flex items-center justify-center">
-                  <div className="text-center">
-                    <svg
-                      className="w-32 h-32 md:w-40 md:h-40 mx-auto mb-4 text-primary/50"
-                      fill="none"
-                      viewBox="0 0 24 24"
-                      stroke="currentColor"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={1.5}
-                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                      />
-                    </svg>
-                    <p className="text-muted-foreground text-sm">Add your photo here</p>
-                  </div>
-                </div>
+                {/* Profile image */}
+                <img
+                  src={profileImg}
+                  alt="Adriaan M. Dimate"
+                  loading="lazy"
+                  className="w-full h-full object-cover"
+                />
               </div>
 
               {/* Decorative elements */}
