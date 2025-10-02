@@ -35,15 +35,15 @@ export const About = () => {
               <div className="absolute -inset-4 bg-gradient-to-r from-primary/20 to-accent/20 rounded-3xl blur-2xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
               <div className="relative bg-card/60 backdrop-blur-md border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-500">
                 <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                  I'm a passionate professional with a unique combination of skills spanning aviation, 
-                  software development, and quality assurance. My journey has taught me the importance 
-                  of precision, adaptability, and continuous learning.
+                  I'm an autistic developer with a love for creating beautiful, functional, and user-centered 
+                  digital experiences. With a background in both frontend and backend development, I enjoy 
+                  bringing ideas to life through clean, efficient code and thoughtful design. I also am aiming 
+                  to become an airline captain, combining my passion for aviation with my technical skills, 
+                  combined with my passion for flying and travelling, ensuring a smooth, pleasant, and lovely 
+                  experience for users and passengers.
                 </p>
                 <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-                  Currently pursuing my commercial pilot license while building robust software 
-                  solutions and ensuring quality standards that exceed expectations. I believe in 
-                  bringing the same level of rigor and attention to detail from aviation safety 
-                  protocols into every line of code I write.
+                  Currently pursuing my degree in Computer Science, as the first step
                 </p>
                 <p className="text-lg text-foreground/90 leading-relaxed">
                   When I'm not in the cockpit or coding, I'm exploring new technologies, contributing 
