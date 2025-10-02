@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, Plane, Award, Clock } from "lucide-react";
-import { Snowfall } from "@/components/Snowfall";
-import { SnowPile } from "@/components/SnowPile";
+
 import snowGlobeBg from "@/assets/snow-globe-bg.png";
 
 export const Aviation = () => {
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const projects = [
     {
@@ -50,11 +55,6 @@ export const Aviation = () => {
         <div className="absolute inset-0 bg-black/50" />
       </div>
 
-      {/* Snowfall Effect */}
-      <Snowfall />
-
-      {/* Snow Pile at Bottom */}
-      <SnowPile />
 
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-12">

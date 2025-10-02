@@ -1,35 +1,50 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, Code2, Github, ExternalLink } from "lucide-react";
 import snowGlobeBg from "@/assets/snow-globe-bg.png";
 
 export const SoftwareDevelopment = () => {
   const navigate = useNavigate();
 
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const projects = [
     {
-      title: "E-Commerce Platform",
-      tech: ["React", "Node.js", "PostgreSQL", "Stripe"],
-      description: "Full-stack e-commerce solution with real-time inventory management and secure payment processing.",
-      highlights: ["Built RESTful API", "Implemented JWT authentication", "Integrated payment gateway"],
+      title: "E-Commerce Platform (Group Project - Software Engineering 1 & 2, AppDev, HCI, Project Mgmt)",
+      tech: ["Vanilla", "Node.js", "Supabase", "PostgreSQL"],
+      description: "Full-stack e-commerce app for a flea market application. Currently being rewritten.",
+      highlights: ["Core Vanilla JS", "User Authentication", "Role-based access"],
       github: "#",
-      demo: "#",
+      demo: "https://updated-camfleatest.vercel.app/",
     },
     {
-      title: "Task Management App",
-      tech: ["React", "TypeScript", "Supabase"],
-      description: "Collaborative task management with real-time updates and team features.",
-      highlights: ["Real-time sync", "Role-based access", "Responsive design"],
+      title: "War of Dots page",
+      tech: ["React", "Node.js"],
+      description: "Original website by Tjdog19 & CuriousAnt, remade by me with React with permission from Tea and Python. All credits goes to the original creators.",
+      highlights: ["Responsive design", "Interactive UI", "Performance and UI optimization"],
       github: "#",
-      demo: "#",
+      demo: "https://warofdots.net/",
     },
     {
-      title: "Weather Dashboard",
+      title: "QuickSky Weather App",
       tech: ["React", "OpenWeather API", "Chart.js"],
-      description: "Interactive weather dashboard with forecasting and data visualization.",
+      description: "No-nonsense and no-bloatware simple progressive web app for weather forecasts",
       highlights: ["API integration", "Data visualization", "Geolocation features"],
       github: "#",
-      demo: "#",
+      demo: "https://quicksky.netlify.app/",
     },
+    {
+      title: "Practicum vlogsite",
+      tech: ["Vanilla", "Node.js", "Supabase", "PostgreSQL"],
+      description: "Practicum vlogsite which I used to display the vlogs as requird by Prof. Loudel M. Manaloto, MSCS. The vlogsite isn't required, but overkill is always better.",
+      highlights: ["CRUD operations", "User authentication", "Responsive design", "Video playback", "Core Vanilla JS"],
+      github: "#",
+      demo: "https://practicumoneblogsite.vercel.app/",
+    },
+
   ];
 
   return (
@@ -65,8 +80,11 @@ export const SoftwareDevelopment = () => {
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">
             Software Development
           </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <h2 className="text-xl text-muted-foreground max-w-3xl mx-auto">
             Building modern, scalable applications with clean code and user-centric design.
+          </h2>
+          <p className=" text-muted-foreground max-w-xl mx-auto">
+            Click on a project to view.
           </p>
         </div>
 

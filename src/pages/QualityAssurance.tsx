@@ -1,9 +1,15 @@
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import { ArrowLeft, ClipboardCheck, Bug, CheckCircle2, Target } from "lucide-react";
 import snowGlobeBg from "@/assets/snow-globe-bg.png";
 
 export const QualityAssurance = () => {
   const navigate = useNavigate();
+
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const projects = [/*
     {
