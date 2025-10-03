@@ -16,7 +16,7 @@
 #   VITE_EMAILJS_PUBLIC_KEY = "your_public_key"
 
 # If you need redirects (SPA routing), uncomment and customize the rule below:
-# [[redirects]]
-#   from = "/*"
-#   to = "/index.html"
-#   status = 200
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
