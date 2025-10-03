@@ -205,16 +205,16 @@ export const About = () => {
                   <Heart className="w-5 h-5 text-primary" />
                   <h3 className="text-xl font-bold text-foreground">Interests</h3>
                 </div>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
                   {interests.map((interest, index) => (
                     <div
                       key={interest.label}
-                      className="group/interest relative bg-secondary/20 backdrop-blur-sm rounded-lg p-3 hover:bg-secondary/40 transition-all duration-300 text-center border border-border/30 hover:border-primary/50"
+                      className="group/interest relative bg-secondary/20 backdrop-blur-sm rounded-lg p-4 hover:bg-secondary/40 transition-all duration-300 text-center border border-border/30 hover:border-primary/50 min-h-[80px] flex flex-col items-center justify-center"
                     >
-                      <div className="text-primary group-hover/interest:text-accent transition-colors duration-300 mb-1 flex justify-center">
+                      <div className="text-primary group-hover/interest:text-accent transition-colors duration-300 mb-2 flex justify-center">
                         {interest.icon}
                       </div>
-                      <p className="text-xs font-medium text-foreground group-hover/interest:text-primary transition-colors duration-300">
+                      <p className="text-xs font-medium text-foreground group-hover/interest:text-primary transition-colors duration-300 text-center">
                         {interest.label}
                       </p>
                     </div>
