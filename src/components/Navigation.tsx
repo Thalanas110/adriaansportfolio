@@ -70,17 +70,21 @@ export const Navigation = () => {
 
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="fixed inset-0 z-40 md:hidden bg-background/95 backdrop-blur-xl animate-fade-in">
-          <div className="flex flex-col items-center justify-center h-full gap-8">
+        <div className="fixed inset-0 z-30 md:hidden">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-background/95 backdrop-blur-xl opacity-100"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          {/* Menu Content - positioned below navbar */}
+          <div className="relative z-40 flex flex-col items-center justify-center h-full gap-8 pt-20">
             {navItems.map((item, index) => (
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className="text-2xl font-medium text-foreground hover:text-primary transition-all duration-300 hover:scale-110"
+                className="text-2xl font-medium text-foreground hover:text-primary transition-all duration-300 hover:scale-110 opacity-100 animate-fade-in-scale"
                 style={{
-                  animation: `fade-in-scale 0.4s ease-out forwards`,
                   animationDelay: `${index * 0.1}s`,
-                  opacity: 0,
                 }}
               >
                 {item.label}

@@ -18,7 +18,7 @@ export const Hero = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Side - Text Content */}
           <div
-            className={`transition-all duration-1000 lg:pl-1 ${
+            className={`transition-all duration-1000 lg:pl-1 order-2 lg:order-1 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
             }`}
           >
@@ -97,7 +97,7 @@ export const Hero = () => {
 
           {/* Right Side - Profile Picture */}
           <div
-            className={`flex justify-center lg:justify-start lg:-ml-1 transition-all duration-1000 delay-300 ${
+            className={`flex justify-center lg:justify-start lg:-ml-1 transition-all duration-1000 delay-300 order-1 lg:order-2 ${
               isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
             }`}
           >

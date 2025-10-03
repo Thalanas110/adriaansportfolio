@@ -96,6 +96,10 @@ export default {
           "0%": { opacity: "0", transform: "scale(0.9)" },
           "100%": { opacity: "1", transform: "scale(1)" },
         },
+        "fade-in": {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
         "snow-fall": {
           "0%": { transform: "translateY(-10vh) rotate(0deg)" },
           "100%": { transform: "translateY(110vh) rotate(360deg)" },
@@ -109,6 +113,7 @@ export default {
         "glow-pulse": "glow-pulse 3s ease-in-out infinite",
         "fade-in-up": "fade-in-up 0.8s ease-out forwards",
         "fade-in-scale": "fade-in-scale 0.6s ease-out forwards",
+        "fade-in": "fade-in 0.3s ease-out forwards",
         "snow-fall": "snow-fall linear infinite",
       },
     },
