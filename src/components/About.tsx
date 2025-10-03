@@ -1,4 +1,5 @@
-import { Mail, Linkedin, Github, Award, Target, Zap, Briefcase, GraduationCap, Heart, Code, Plane, Camera, Music, BookOpen, Bed } from "lucide-react";
+import { Mail, Linkedin, Github, Award, Target, Zap, Briefcase, GraduationCap, Heart, Code, Plane, Camera, Music, BookOpen, Bed, Download } from "lucide-react";
+import resumePDF from "../assets/adriaan resume.pdf";
 
 export const About = () => {
   const highlights = [
@@ -88,7 +89,7 @@ export const About = () => {
               <div className="relative bg-card/60 backdrop-blur-md border border-border rounded-xl p-6 hover:border-primary/50 transition-all duration-500">
                 <div className="flex items-start gap-4">
                   <div className="flex-1 pr-4">
-                    <p className="text-sm text-foreground/90 leading-relaxed mb-4">
+                    <p className="text-sm md:text-base lg:text-lg text-foreground/90 leading-relaxed mb-4">
                       I'm an autistic developer with a love for creating beautiful, functional, and user-centered 
                       digital experiences. With a background in both frontend and backend development, I enjoy 
                       bringing ideas to life through clean, efficient code and thoughtful design. I also am aiming 
@@ -96,12 +97,12 @@ export const About = () => {
                       combined with my passion for flying and travelling, ensuring a smooth, pleasant, and lovely 
                       experience for users and passengers.
                     </p>
-                    <p className="text-sm text-foreground/90 leading-relaxed mb-4">
+                    <p className="text-sm md:text-base lg:text-lg text-foreground/90 leading-relaxed mb-4">
                       Currently pursuing my degree in Computer Science, as the first step towards my goal of becoming a
                       commercial airline pilot. I am dedicated to continuous learning and growth, both in my technical
                       skills and my aviation knowledge.
                     </p>
-                    <p className="text-sm text-foreground/90 leading-relaxed">
+                    <p className="text-sm md:text-base lg:text-lg text-foreground/90 leading-relaxed">
                       When I'm not in the cockpit or coding, I'm exploring new technologies, contributing 
                       to open-source projects, and staying current with industry best practices.
                     </p>
@@ -138,10 +139,10 @@ export const About = () => {
                       {highlight.icon}
                     </div>
                     <div>
-                      <h3 className="text-sm font-bold mb-1 text-foreground group-hover:text-primary transition-colors duration-300">
+                      <h3 className="text-sm md:text-base lg:text-lg font-bold mb-1 text-foreground group-hover:text-primary transition-colors duration-300">
                         {highlight.title}
                       </h3>
-                      <p className="text-xs text-muted-foreground leading-relaxed">
+                      <p className="text-xs md:text-sm lg:text-base text-muted-foreground leading-relaxed">
                         {highlight.description}
                       </p>
                     </div>
@@ -163,10 +164,10 @@ export const About = () => {
                 {experiences.map((exp, index) => (
                   <div key={exp.title} className="border-l-2 border-primary/30 pl-3 relative">
                     <div className="absolute -left-1 top-0.5 w-2 h-2 bg-primary rounded-full"></div>
-                    <h4 className="text-sm font-semibold text-foreground leading-tight">{exp.title}</h4>
-                    <p className="text-xs text-primary font-medium">{exp.company}</p>
-                    <p className="text-xs text-accent mb-1">{exp.period}</p>
-                    <p className="text-xs text-muted-foreground leading-relaxed">{exp.description}</p>
+                    <h4 className="text-sm md:text-base font-semibold text-foreground leading-tight">{exp.title}</h4>
+                    <p className="text-xs md:text-sm text-primary font-medium">{exp.company}</p>
+                    <p className="text-xs md:text-sm text-accent mb-1">{exp.period}</p>
+                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
                   </div>
                 ))}
               </div>
@@ -187,10 +188,10 @@ export const About = () => {
                   {education.map((edu, index) => (
                     <div key={edu.degree} className="border-l-2 border-primary/30 pl-3 relative">
                       <div className="absolute -left-1 top-0.5 w-2 h-2 bg-primary rounded-full"></div>
-                      <h4 className="text-sm font-semibold text-foreground leading-tight">{edu.degree}</h4>
-                      <p className="text-xs text-primary font-medium">{edu.school}</p>
-                      <p className="text-xs text-accent mb-1">{edu.period}</p>
-                      <p className="text-xs text-muted-foreground leading-relaxed">{edu.description}</p>
+                      <h4 className="text-sm md:text-base font-semibold text-foreground leading-tight">{edu.degree}</h4>
+                      <p className="text-xs md:text-sm text-primary font-medium">{edu.school}</p>
+                      <p className="text-xs md:text-sm text-accent mb-1">{edu.period}</p>
+                      <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{edu.description}</p>
                     </div>
                   ))}
                 </div>
@@ -214,13 +215,28 @@ export const About = () => {
                       <div className="text-primary group-hover/interest:text-accent transition-colors duration-300 mb-2 flex justify-center">
                         {interest.icon}
                       </div>
-                      <p className="text-xs font-medium text-foreground group-hover/interest:text-primary transition-colors duration-300 text-center">
+                      <p className="text-xs md:text-sm font-medium text-foreground group-hover/interest:text-primary transition-colors duration-300 text-center">
                         {interest.label}
                       </p>
                     </div>
                   ))}
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* Download Resume Button */}
+          <div className="flex justify-center mt-12">
+            <div className="relative group">
+              <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-50 blur-xl transition-all duration-700" />
+              <a
+                href={resumePDF}
+                download="Adriaan_Dimate_Resume.pdf"
+                className="relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 backdrop-blur-sm"
+              >
+                <Download className="w-5 h-5" />
+                <span className="text-base md:text-lg">Download Resume</span>
+              </a>
             </div>
           </div>
         </div>
