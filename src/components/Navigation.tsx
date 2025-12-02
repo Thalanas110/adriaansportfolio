@@ -22,6 +22,7 @@ export const Navigation = () => {
   const navItems = [
     { id: "home", label: "Home" },
     { id: "about", label: "About" },
+    { id: "experience", label: "Experience" },
     { id: "portfolio", label: "Portfolio" },
     { id: "contact", label: "Contact" },
   ];

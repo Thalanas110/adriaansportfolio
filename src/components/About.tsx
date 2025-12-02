@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github, Award, Target, Zap, Briefcase, GraduationCap, Heart, Code, Plane, Camera, Music, BookOpen, Bed, Download } from "lucide-react";
+import { Mail, Linkedin, Github, Award, Target, Zap, GraduationCap, Heart, Code, Plane, Camera, Music, BookOpen, Bed, Download } from "lucide-react";
 import resumePDF from "../assets/adriaan resume.pdf";
 
 export const About = () => {
@@ -18,33 +18,6 @@ export const About = () => {
       title: "Quick Learner",
       description: "Rapidly adapting to new technologies and methodologies in the industry",
     },
-  ];
-
-  const experiences = [
-    {
-      title: "Volunteer Software Developer",
-      company: "I Care Center",
-      period: "Jun 2025 - Present",
-      description: "Improved OBS Remote for livestreams, built a scalable church site and app, and managed agile workflows with ministry teams"
-    },
-    {
-      title: "Volunteer Production Staff & QA Assistant",
-      company: "I Care Center",
-      period: "Jan 2024 - Present",
-      description: "Operated and QA'd ProPresenter for live and online services, syncing media in real time and resolving tech issues with worship and media teams."
-    },
-    {
-      title: "Data Encoder & Macro Programmer | Internship",
-      company: "ACE Medical Centre - Baypointe",
-      period: "2025 - 2025",
-      description: "Interned about encoding patient data and created macros to improve encoding efficiency."
-    },
-    {
-      title: "Data Encoder & Bookkeeper",
-      company: "TDA Car Rental",
-      period: "2023 - Present | Working Student",
-      description: "Created responsive web interfaces and improved user experience across multiple projects."
-    }
   ];
 
   const education = [
@@ -149,28 +122,6 @@ export const About = () => {
                   </div>
                 </div>
               ))}
-            </div>
-          </div>
-
-          {/* Experience Section - Full width with grid layout */}
-          <div className="relative group">
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/20 to-accent/20 rounded-xl blur-lg opacity-0 group-hover:opacity-100 transition-all duration-700" />
-            <div className="relative bg-card/60 backdrop-blur-md border border-border rounded-lg p-6 hover:border-primary/50 transition-all duration-500">
-              <div className="flex items-center gap-2 mb-4">
-                <Briefcase className="w-5 h-5 text-primary" />
-                <h3 className="text-xl font-bold text-foreground">Experience</h3>
-              </div>
-              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {experiences.map((exp, index) => (
-                  <div key={exp.title} className="border-l-2 border-primary/30 pl-3 relative">
-                    <div className="absolute -left-1 top-0.5 w-2 h-2 bg-primary rounded-full"></div>
-                    <h4 className="text-sm md:text-base font-semibold text-foreground leading-tight">{exp.title}</h4>
-                    <p className="text-xs md:text-sm text-primary font-medium">{exp.company}</p>
-                    <p className="text-xs md:text-sm text-accent mb-1">{exp.period}</p>
-                    <p className="text-xs md:text-sm text-muted-foreground leading-relaxed">{exp.description}</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 

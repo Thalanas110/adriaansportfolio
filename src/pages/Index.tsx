@@ -1,6 +1,7 @@
 import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { About } from "@/components/About";
+import { Experience } from "@/components/Experience";
 import { PortfolioSection } from "@/components/PortfolioSection";
 import { Contact } from "@/components/Contact";
 import snowGlobeBg from "@/assets/snow-globe-bg.png";
@@ -29,6 +30,7 @@ const Index = () => {
       <div className="relative z-10">
         <Hero />
         <About />
+        <Experience />
         <PortfolioSection />
         <Contact />
         

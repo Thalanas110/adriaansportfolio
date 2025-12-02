@@ -15,7 +15,7 @@ export const Snowfall = () => {
 
   useEffect(() => {
     // Use fewer snowflakes on mobile (22) vs desktop (200)
-    const snowflakeCount = isMobile ? 22 : 200;
+    const snowflakeCount = isMobile ? 22 : 400;
     
     const flakes: Snowflake[] = Array.from({ length: snowflakeCount }, (_, i) => ({
       id: i,
