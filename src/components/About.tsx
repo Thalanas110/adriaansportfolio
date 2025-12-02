@@ -1,5 +1,4 @@
 import { Mail, Linkedin, Github, Award, Target, Zap, GraduationCap, Heart, Code, Plane, Camera, Music, BookOpen, Bed, Download } from "lucide-react";
-import resumePDF from "../assets/adriaan resume.pdf";
 
 export const About = () => {
   const highlights = [
@@ -181,7 +180,7 @@ export const About = () => {
             <div className="relative group">
               <div className="absolute -inset-2 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-50 blur-xl transition-all duration-700" />
               <a
-                href={resumePDF}
+                href="/adriaan resume new edit (1).pdf"
                 download="Adriaan_Dimate_Resume.pdf"
                 className="relative inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-primary to-accent text-white font-semibold rounded-xl hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl border border-primary/20 backdrop-blur-sm"
               >
