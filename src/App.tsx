@@ -12,41 +12,58 @@ import NotFound from "./pages/NotFound";
 import { Snowfall } from "@/components/Snowfall";
 import { SnowPile } from "@/components/SnowPile";
 import { LoadingScreen } from "@/components/LoadingScreen";
+import { LdmProvider, useLdm } from "@/contexts/LdmContext";
 
 const queryClient = new QueryClient();
 
-const App = () => {
+const AppContent = () => {
   const [isLoading, setIsLoading] = useState(true);
+  const { isLdmEnabled } = useLdm();
 
   const handleLoadingComplete = () => {
     setIsLoading(false);
   };
 
   return (
+    <>
+      <Toaster />
+      <Sonner />
+      {isLoading ? (
+        <LoadingScreen onLoadingComplete={handleLoadingComplete} />
+      ) : (
+        <BrowserRouter>
+          {/* Conditionally render snow effects based on LDM state */}
+          {!isLdmEnabled && (
+            <>
+              {/* Snowfall Effect */}
+              <Snowfall />
+
+              {/* Snow Pile at Bottom */}
+              <SnowPile />
+            </>
+          )}
+
+          <Routes>
+            <Route path="/" element={<Index />} />
+            <Route path="/aviation" element={<Aviation />} />
+            <Route path="/software-development" element={<SoftwareDevelopment />} />
+            <Route path="/quality-assurance" element={<QualityAssurance />} />
+            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </BrowserRouter>
+      )}
+    </>
+  );
+};
+
+const App = () => {
+  return (
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        {isLoading ? (
-          <LoadingScreen onLoadingComplete={handleLoadingComplete} />
-        ) : (
-          <BrowserRouter>
-            {/* Snowfall Effect */}
-            <Snowfall />
-
-            {/* Snow Pile at Bottom */}
-            <SnowPile />
-
-            <Routes>
-              <Route path="/" element={<Index />} />
-              <Route path="/aviation" element={<Aviation />} />
-              <Route path="/software-development" element={<SoftwareDevelopment />} />
-              <Route path="/quality-assurance" element={<QualityAssurance />} />
-              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </BrowserRouter>
-        )}
+        <LdmProvider>
+          <AppContent />
+        </LdmProvider>
       </TooltipProvider>
     </QueryClientProvider>
   );
