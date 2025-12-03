@@ -14,7 +14,7 @@ export const SoftwareDevelopment = () => {
   const projects = [
     {
       title: "E-Commerce Platform (Group Project - Software Engineering 1 & 2, AppDev, HCI, Project Mgmt)",
-      tech: ["Vanilla", "Node.js", "Supabase", "PostgreSQL"],
+      tech: ["Vanilla", "Node.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
       description: "Full-stack e-commerce app for a flea market application. Currently being rewritten.",
       highlights: ["Core Vanilla JS", "User Authentication", "Role-based access"],
       github: "#",
@@ -30,7 +30,7 @@ export const SoftwareDevelopment = () => {
     },
     {
       title: "QuickSky Weather App",
-      tech: ["React", "OpenWeather API", "Chart.js"],
+      tech: ["React", "Vite", "OpenWeather API", "Chart.js", "Tailwind CSS"],
       description: "No-nonsense and no-bloatware simple progressive web app for weather forecasts",
       highlights: ["API integration", "Data visualization", "Geolocation features"],
       github: "#",
@@ -38,7 +38,7 @@ export const SoftwareDevelopment = () => {
     },
     {
       title: "Practicum vlogsite",
-      tech: ["Vanilla", "Node.js", "Supabase", "PostgreSQL"],
+      tech: ["Vanilla", "Vite","Node.js", "Supabase", "PostgreSQL"],
       description: "Practicum vlogsite which I used to display the vlogs as requird by Prof. Loudel M. Manaloto, MSCS. The vlogsite isn't required, but overkill is always better.",
       highlights: ["CRUD operations", "User authentication", "Responsive design", "Video playback", "Core Vanilla JS"],
       github: "#",
@@ -53,12 +53,12 @@ export const SoftwareDevelopment = () => {
       demo: "#",
     },
         {
-      title: "poem selector samples",
-      tech: ["Vanilla"],
-      description: "Poem selection panes that I did for my now ex-girlfriend. All displayed on the website, just click to select. Although these should no longer be here, some of my best UI/UX works are here.Under maintenance to remove ALL names and only the UI + poems will remain.",
-      highlights: ["Vanilla JS", "Responsive design", "UI/UX"],
-      github: "#",
-      demo: "https://poemselections.netlify.app/",
+      title: "Devotion blogsite",
+      tech: ["React", "Vite", "Node.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
+      description: "Devotion website I did with full admin dashboard so I could just use this instead of randomizing in my notes app on my phone & track devotions better",
+      highlights: ["Simple responsive design"],
+      github: "#https://github.com/Thalanas110/DevotionPage",
+      demo: "https://adriaansdevotions.netlify.app/",
     },
 
   ];
