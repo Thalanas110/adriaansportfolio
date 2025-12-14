@@ -25,7 +25,7 @@ export const SoftwareDevelopment = () => {
       tech: ["React", "Node.js"],
       description: "Original website by Tjdog19 & CuriousAnt, remade by me with React with permission from Tea and Python. All credits goes to the original creators.",
       highlights: ["Responsive design", "Interactive UI", "Performance and UI optimization"],
-      github: "#",
+      github: "https://github.com/warofdots/website-v3",
       demo: "https://warofdots.net/",
     },
     {
@@ -33,31 +33,31 @@ export const SoftwareDevelopment = () => {
       tech: ["React", "Vite", "OpenWeather API", "Chart.js", "Tailwind CSS"],
       description: "No-nonsense and no-bloatware simple progressive web app for weather forecasts",
       highlights: ["API integration", "Data visualization", "Geolocation features"],
-      github: "#",
+      github: "https://github.com/Thalanas110/NewWeatherPWA",
       demo: "https://quicksky.netlify.app/",
     },
     {
       title: "Practicum vlogsite",
-      tech: ["Vanilla", "Vite","Node.js", "Supabase", "PostgreSQL"],
+      tech: ["Vanilla", "Vite", "Node.js", "Supabase", "PostgreSQL"],
       description: "Practicum vlogsite which I used to display the vlogs as requird by Prof. Loudel M. Manaloto, MSCS. The vlogsite isn't required, but overkill is always better.",
       highlights: ["CRUD operations", "User authentication", "Responsive design", "Video playback", "Core Vanilla JS"],
-      github: "#",
+      github: "https://github.com/zionren/OJTblogsite",
       demo: "https://practicumoneblogsite.vercel.app/",
     },
     {
       title: "church website",
-      tech: ["React", "Node.js", "Supabase", "PostgreSQL"],
+      tech: ["React", "Node.js", "Supabase", "PostgreSQL", "LeafletJS", "Tailwind CSS"],
       description: "Website for my church where I am a part of the media team.",
       highlights: ["CRUD operations", "User authentication", "Responsive design", "Video playback", "God-oriented"],
       github: "#",
-      demo: "#",
+      demo: "https://icarecenter.netlify.app/",
     },
-        {
+    {
       title: "Devotion blogsite",
       tech: ["React", "Vite", "Node.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
       description: "Devotion website I did with full admin dashboard so I could just use this instead of randomizing in my notes app on my phone & track devotions better",
       highlights: ["Simple responsive design"],
-      github: "#https://github.com/Thalanas110/DevotionPage",
+      github: "https://github.com/Thalanas110/DevotionPage",
       demo: "https://adriaansdevotions.netlify.app/",
     },
 
@@ -135,7 +135,7 @@ export const SoftwareDevelopment = () => {
               <div className="absolute -inset-1 bg-gradient-to-r from-primary to-accent opacity-0 group-hover:opacity-50 blur-xl transition-all duration-700" />
               <div className="relative h-full bg-gradient-to-br from-card/90 to-card/70 backdrop-blur-md border border-border rounded-2xl p-8 hover:border-primary/50 transition-all duration-500 flex flex-col">
                 <h3 className="text-2xl font-bold text-foreground mb-4">{project.title}</h3>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((tech) => (
                     <span
