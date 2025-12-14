@@ -25,7 +25,7 @@ export const SoftwareDevelopment = () => {
       tech: ["React", "Node.js", "Supabase", "PostgreSQL", "LeafletJS", "Tailwind CSS"],
       description: "Website for my church where I am a part of the media team.",
       highlights: ["RBAC operations", "User authentication", "Responsive design", "Video playback", "God-oriented"],
-      github: "#",
+      github: "#", // proprietary system so the github link is not available
       demo: "https://icarecenter.netlify.app/",
     },
     {
