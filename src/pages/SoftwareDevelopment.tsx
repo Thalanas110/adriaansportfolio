@@ -13,18 +13,26 @@ export const SoftwareDevelopment = () => {
 
   const projects = [
     {
-      title: "E-Commerce Platform (Group Project - Software Engineering 1 & 2, AppDev, HCI, Project Mgmt)",
+      title: "E-Commerce Platform (Group Project - CSP312A/L, CSP322A/L, CSE316A/L, CSP225A/L, CSC221A/L)",
       tech: ["Vanilla", "Node.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
       description: "Full-stack e-commerce app for a flea market application. Currently being rewritten.",
       highlights: ["Core Vanilla JS", "User Authentication", "Role-based access"],
+      github: "https://github.com/Thalanas110/camflea-new",
+      demo: "https://camflea-newer2.vercel.app/",
+    },
+    {
+      title: "I Care Center website",
+      tech: ["React", "Node.js", "Supabase", "PostgreSQL", "LeafletJS", "Tailwind CSS"],
+      description: "Website for my church where I am a part of the media team.",
+      highlights: ["RBAC operations", "User authentication", "Responsive design", "Video playback", "God-oriented"],
       github: "#",
-      demo: "https://updated-camfleatest.vercel.app/",
+      demo: "https://icarecenter.netlify.app/",
     },
     {
       title: "War of Dots page",
       tech: ["React", "Node.js"],
-      description: "Original website by Tjdog19 & CuriousAnt, remade by me with React with permission from Tea and Python. All credits goes to the original creators.",
-      highlights: ["Responsive design", "Interactive UI", "Performance and UI optimization"],
+      description: "Original website by Tjdog19 & CuriousAnt, remade by me using React with permission from Tea and Python. All credits goes to the original creators.",
+      highlights: ["Responsive design", "Interactive UI", "Performance and UI beautification"],
       github: "https://github.com/warofdots/website-v3",
       demo: "https://warofdots.net/",
     },
@@ -45,22 +53,13 @@ export const SoftwareDevelopment = () => {
       demo: "https://practicumoneblogsite.vercel.app/",
     },
     {
-      title: "church website",
-      tech: ["React", "Node.js", "Supabase", "PostgreSQL", "LeafletJS", "Tailwind CSS"],
-      description: "Website for my church where I am a part of the media team.",
-      highlights: ["CRUD operations", "User authentication", "Responsive design", "Video playback", "God-oriented"],
-      github: "#",
-      demo: "https://icarecenter.netlify.app/",
-    },
-    {
       title: "Devotion blogsite",
       tech: ["React", "Vite", "Node.js", "Supabase", "PostgreSQL", "Tailwind CSS"],
       description: "Devotion website I did with full admin dashboard so I could just use this instead of randomizing in my notes app on my phone & track devotions better",
-      highlights: ["Simple responsive design"],
+      highlights: ["Simple responsive design", "CRUD operations", "User authentication", "Responsive design"],
       github: "https://github.com/Thalanas110/DevotionPage",
       demo: "https://adriaansdevotions.netlify.app/",
-    },
-
+    }
   ];
 
   return (
